@@ -115,14 +115,15 @@ this may be a thing to fix or not use
 
 so for this challenge I don't have the debugger, that's probably like a regular challenge anyway. I would like to figure out how to use it though.
 
-change:             ans.push(nextNum,i+2)
+change:
+    ans.push(nextNum,i+2)
 confused with indices again, i+2 is the value that should be in the next space, since the numbers start with 1 it adds an extra. i+1 would only be the number of the index/space, starting at 0.
 worked for the first test case
 
-Submission Result: Wrong Answer
-Input: [1,1]
-Output: [NaN,2]
-Expected: [1,2]
+    Submission Result: Wrong Answer
+    Input: [1,1]
+    Output: [NaN,2]
+    Expected: [1,2]
 
 this seems to me like it should work
 screw it I'm using replit, I'll take my notes in vscode I guess
@@ -186,9 +187,7 @@ loop:
     if it is empty, find the missing num, 
         then find the duplicate num
 
-
 just hit 2 hours 15 mins on this problem, pausing here.
-
 
 ### Try 2: Code
 
@@ -234,7 +233,111 @@ if(sortedNums[0] != 1){
 }
 ```
 
-## Leetcode Stats/Results
+### Code #3
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var findErrorNums = function(nums) {
+    let ans = [];
+    let sortedNums = nums.sort((a, b) => a - b);
+    console.log('sortedNums: ', sortedNums);
+
+    let missingNum = 0;
+    let duplicateNum = 0;
+    let n = sortedNums.length
+
+    for (i = 0; i < sortedNums.length - 1; i++) {
+        thisNum = sortedNums[i];
+        nextNum = sortedNums[i + 1];
+        // console.log('(D) thisNum: ', thisNum);
+        if (nextNum === thisNum) {
+            duplicateNum = nextNum;
+            console.log('duplicateNum is: ', duplicateNum);
+            break;
+        }
+    }
+
+    if (sortedNums[0] != 1) {
+        missingNum = 1;
+        console.log('missingNum is 1');
+        ans.push(duplicateNum, missingNum);
+        console.log('m/n', ans);
+        return ans;
+    } else if (sortedNums[n - 1] != n) {
+        missingNum = n;
+        console.log('missingNum is n: ', missingNum);
+        ans.push(duplicateNum, missingNum);
+        console.log('m/n', ans);
+        return ans;
+    } else {
+        for (i = 0; i < sortedNums.length - 1; i++) {
+            thisNum = sortedNums[i]
+            nextNum = sortedNums[i + 1]
+            // console.log('(M) thisNum: ', thisNum);
+
+            if (nextNum != thisNum + 1) {
+                missingNum = thisNum + 1;
+                console.log('missingNum is ', missingNum);
+                ans.push(duplicateNum, missingNum);
+                console.log('d/n',ans);
+                return ans;
+            }
+        }
+    }
+};
+```
+
+### Testing #3
+
+    findErrorNums([37,62,43,27,12,66,36,18,39,54,61,65,47,32,23,2,46,8,4,24,29,38,63,39,25,11,45,28,44,52,15,30,21,7,57,49,1,59,58,14,9,40,3,42,56,31,20,41,22,50,13,33,6,10,16,64,53,51,19,17,48,26,34,60,35,5])
+    // Expected: [39,40]
+    // FAIL - [39,55]
+
+Thinking through what I did wrong here. The program is getting a little longwinded. I'm skipping the case where the missing number isn't right after the duplicate. It's hard for me to read back and find where that should be.
+
+#### Pseudocode:
+
+    * Define Answer & SortedNums, n
+    * Declare missing, duplicate
+    
+    * LOOP: check for duplicates
+        - thisNum
+        - nextNum
+        - IF thisNum === nextNum:
+            * duplicate is nextNum
+            (the second copy of the num)
+            * break this loop
+
+    // NOTE - this only runs AFTER the duplicate 
+    has been found, there should always be a correct
+    duplicate at this stage
+
+    * IF: first number isn't 1
+        - THEN: 1 is missing
+        - set missingNum
+        - push duplicate & missing to ans
+        - return ans
+
+    * ELSEIF: the last number isn't n
+        - THEN: n is missing
+        - set missingNum
+        - push duplicate & missing to ans
+        - return ans
+
+    * ELSE:  
+        - LOOP: step through each number to find the
+        missing num
+        
+        //! I think the mistake here is treating
+        this loop exactly like the last loop.
+        the numbers shouldn't be paired up in 
+        the same way. Need 3 nums to determine a gap.
+        end of the array is n-1 because nums[n] 
+        is checked by the previous case.
+## Leetcode Stats/Final Results
 
 ## Things I Googled
 
