@@ -1,9 +1,3 @@
-
-
-/*
- * @param {number[]} nums
- * @return {number[]}
- */
 var findErrorNums = function(nums) {
     let ans = [];
     let sortedNums = nums.sort((a, b) => a - b);
@@ -50,6 +44,7 @@ var findErrorNums = function(nums) {
         }
     }
 };
+
 // TEST CALLS
 
 findErrorNums([1,2,2,4]);
@@ -71,6 +66,3 @@ findErrorNums([1,2,2,4]);
 // findErrorNums([[3,2,3,4,6,5]]);
 // sb [3,3]
 // FAIL: [3,1]
-
-
-
