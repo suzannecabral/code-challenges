@@ -47,7 +47,7 @@ var findErrorNums = function(nums) {
 
 // TEST CALLS
 
-findErrorNums([1,2,2,4]);
+// findErrorNums([1,2,2,4]);
 // sb [2,3]
 // PASS
 

@@ -58,7 +58,8 @@ Constraints:
 
 ### Try 1: Code
 
-```let ans = [];
+```javascript
+let ans = [];
 
 if(s[s.length] != n]){
     ans.push(s[s.length],n);
@@ -118,7 +119,7 @@ change:             ans.push(nextNum,i+2)
 confused with indices again, i+2 is the value that should be in the next space, since the numbers start with 1 it adds an extra. i+1 would only be the number of the index/space, starting at 0.
 worked for the first test case
 
-Submission Result: Wrong Answer 
+Submission Result: Wrong Answer
 Input: [1,1]
 Output: [NaN,2]
 Expected: [1,2]
@@ -127,17 +128,17 @@ this seems to me like it should work
 screw it I'm using replit, I'll take my notes in vscode I guess
 quicker workflow this way
 
-Still Testing, no debugger
---------------------
+### Still Testing, no debugger
+
 Console logging "First Case" , "Second case" inside the if statements to see which one it's hitting
+
 - it's hitting the first case
 - there's another instance of the same bracket typo, fixing it
 - looks like it'll go now
 
----------------------------
-    // findErrorNums([3,2,2]);
-    // sb [2,3]
-    // FAIL: [2,1]
+        // findErrorNums([3,2,2]);
+        // sb [2,3]
+        // FAIL: [2,1]
 
 this one is confusing to me
 why wouldn't 1 be missing
@@ -171,7 +172,7 @@ sort ascending:
 so it's being weird about 1 being missing
 
 next version:
-starting checks: 
+starting checks:
     - first is missing (1)
         push to missing num
     - last is missing (n)
@@ -189,10 +190,10 @@ loop:
 just hit 2 hours 15 mins on this problem, pausing here.
 
 
-Try 2: Code
---------------------
+### Try 2: Code
 
-```let ans = [];
+```javascript
+let ans = [];
 let sortedNums = nums.sort((a, b) => a - b);
 console.log('sortedNums: ', sortedNums);
 
@@ -235,16 +236,15 @@ if(sortedNums[0] != 1){
 
 ## Leetcode Stats/Results
 
-## Things I Googled 
+## Things I Googled
 
 - js for loop syntax
-- js mdn array 
-    - shift/unshift vs push/pop, couldn't remember the name
+- js mdn array
+  - shift/unshift vs push/pop, couldn't remember the name
 - js check if equals syntax
-    - strict equals vs comparison
-    - strict equals checks type (not memory loc?)
+  - strict equals vs comparison
+  - strict equals checks type (not memory loc?)
 - js else if without else
-    - yes you can have an if without else
+  - yes you can have an if without else
 - js arrow function syntax
 - js sort array
-
