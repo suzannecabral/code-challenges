@@ -311,7 +311,7 @@ Thinking through what I did wrong here. The program is getting a little longwind
             (the second copy of the num)
             * break this loop
 
-    // NOTE - this only runs AFTER the duplicate 
+    // NOTE - code below only runs AFTER the duplicate 
     has been found, there should always be a correct
     duplicate at this stage
 
@@ -337,7 +337,57 @@ Thinking through what I did wrong here. The program is getting a little longwind
         the same way. Need 3 nums to determine a gap.
         end of the array is n-1 because nums[n] 
         is checked by the previous case.
+
+This is what needs to be replaced, think through why:
+
+        - LOOP: from nums[0] to nums[n-2]
+        // 1/nums[0] has been checked
+        // n/nums[n-1] has been checked
+
+            thisNum
+            nextNum
+            * IF nextNum != thisNum + 1
+                - set missingNum = thisNum + 1
+                - push dup & missing to ans
+                - return ans
+
+When does it fail?
+
+> - Test 7, the one with a ton of inputs.
+> - it's returning from the missing num check [ok]
+> - it's seeing the duplicate value+1 as the missing num [fail]
+
+It should see the duplicate, skip it, check if the next num is duplicate +1, then keep going.
+
+If the next num is greater than duplicate+1, then something is missing in between.
+
+- [x] add another IF that covers the duplicate
+(I really don't need the duplicate check then do I?)
+- [x] this is the UGLY VERSION just leave it
+
+#### Modified code:
+
+```javascript
+if (nextNum != thisNum + 1) {
+
+                if (nextNum === thisNum){
+                    continue;
+                }else{
+                    missingNum = thisNum + 1;
+                    console.log('missingNum is ', missingNum);
+                    ans.push(duplicateNum, missingNum);
+                    console.log('m',ans);
+                    return ans;
+                }
+            }
+```
+
 ## Leetcode Stats/Final Results
+
+FINALLY GOT IT
+
+- runtime beats 26.51% of js solutions
+- memory usage beats 46.99% of js solutions
 
 ## Things I Googled
 
