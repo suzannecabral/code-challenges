@@ -1,5 +1,5 @@
 
-# Two Sum
+# Leetcode 1: Two Sum
 
 [Leetcode](https://leetcode.com/problems/two-sum/)
 
