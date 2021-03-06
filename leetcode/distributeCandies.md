@@ -37,20 +37,55 @@ Explanation: Alice can only eat 4 / 2 = 2 candies. Even though she can eat 2 can
 
 ### Expected Return
 
+return the max number of different types of candy Alice can eat from the given set. (num)
+
 #### Pseudocode 1
+
+total max number of types is n/2
+n is always even so this will always work out
+
+then need to see how many types of candy there actually are
+
+- [x] make a set (gets only unique values)
+
+    IF set.size < n/2
+        ans = set.size
+    ELSE
+        ans = set.size
 
 #### Code 1
 
 ```javascript
+    let ans = 0;
+    const n = candyType.length;
+    const candySet = new Set(candyType);
+
+    if(candySet.size < n/2){
+        ans = candySet.size
+    }else{
+        ans = n/2
+    }
+
+    console.log(ans);
+    return ans;
 ```
 
 #### Test 1
 
+Accepted! that's it. First attempt.
+
 ## Submsision Stats & Results
 
-- runtime:
-- memory usage:
+- runtime: beats 95.40% of submissions (!!!)
+- memory usage: beats 33.47% of submissions
+- Solve time: about 30 mins
+
+## Possible improvements
+
+Memory - maybe doing this without a set?
 
 ## Things I Googled
 
--
+- js set (syntax to make a new set from an array)
+- js set .length (it uses .size instead?)
+- js ternary whichever is greater (ternary operator syntax, don't think I actually want it though)

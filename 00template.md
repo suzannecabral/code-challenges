@@ -21,6 +21,9 @@
 
 - runtime:
 - memory usage:
+- solve time:
+
+## Possible improvements
 
 ## Things I Googled
 
