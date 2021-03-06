@@ -22,6 +22,8 @@
 - runtime:
 - memory usage:
 - solve time:
+- submit attempts:
+- problem acceptance%:
 
 ## Possible improvements
 
