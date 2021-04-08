@@ -1,30 +1,53 @@
-# Site Prob#: Name
+# Number of Squares in an N* Grid
 
-[Link](URL)
+[Number of Squares in an N* Grid - Edabit](https://edabit.com/challenge/RGQXN4TG2CQoBAReQ)
 
-//Description
+Create a function that calculates the number of different squares in an n * n square grid. Check the Resources tab.
+Examples
 
-## The Brute Force Ugly Way
+numberSquares(2) ➞ 5
 
-### Expected Return
+numberSquares(4) ➞ 30
 
-#### Pseudocode 1
+numberSquares(5) ➞ 55
+
+#### Notes
+
+    Input is a positive integer.
+    Square pyramidal number.
+
+## Solution
+
+### First Pass
+
+#### Expected Return
+
+
+#### Psuedocode
+
 
 #### Code 1
-
 ```javascript
+
+// paste here
+
 ```
 
-#### Test 1
+#### Code 2
 
-## Submsision Stats & Results
+```javascript
 
-- runtime:
-- memory usage:
-- solve time:
+// paste here
 
-## Possible improvements
+```
 
-## Things I Googled
 
--
+-----
+
+### Submission Stats
+
+### Possible Improvements
+
+### Things I Googled
+
+*
