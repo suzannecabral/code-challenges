@@ -45,6 +45,10 @@ treat the binary string as an array
     4. convert ans binary arr/str to num
     5. return num
 
+
+    -[x] Convert to binary with num.toString(2)
+    -[x] pad numbers to display leading 0s
+    -[ ] operation: compare digits in result n3
 #### Code 1
 
 
@@ -61,3 +65,8 @@ treat the binary string as an array
     * [StackOverflow](https://stackoverflow.com/questions/9939760/how-do-i-convert-an-integer-to-binary-in-javascript)
     * num.toString(2);
     * has issues with negative nums
+* javascript binary keep zeros
+    * str.repeat(n) will repeat a character (string) a specified number of times
+* for loop js
+    * (Syntax)
+* bitwise AND
