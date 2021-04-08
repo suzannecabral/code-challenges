@@ -129,5 +129,6 @@ dmypy.json
 .pyre/
 
 .vscode
-
 00template.js
+00template.md
+node_modules/
