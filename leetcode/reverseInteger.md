@@ -118,6 +118,9 @@ maybe adv array methods
 Is there something about binary that makes this work? (32 bit nums is the range)
 some kind of bitwise/shifting thing I could look into
 that's a long runtime
+
+look up: overflow
+look into this solution: https://leetcode.com/problems/reverse-integer/discuss/1155643/JavaScript-Solution
 ### Things I Googled
 
 * js to the power of
