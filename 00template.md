@@ -1,30 +1,42 @@
-# Site Prob#: Name
+# Title
 
-[Link](URL)
+[source](link)
 
-//Description
+Paste Here
+Subheads are ####
 
-## The Brute Force Ugly Way
+## Solution
 
-### Expected Return
+### First Pass
 
-#### Pseudocode 1
+#### Expected Return
+
+
+#### Psuedocode
+
 
 #### Code 1
-
 ```javascript
+
+// paste here
+
 ```
 
-#### Test 1
+#### Code 2
 
-## Submsision Stats & Results
+```javascript
 
-- runtime:
-- memory usage:
-- solve time:
+// paste here
 
-## Possible improvements
+```
 
-## Things I Googled
 
--
+-----
+
+### Submission Stats
+
+### Possible Improvements
+
+### Things I Googled
+
+*
