@@ -55,11 +55,23 @@ boolean, true/false
 - zeroes count, 10 -> 01, not 10 -> 1
 
   - if num < 0, false
-  - elif:
+  - else:
     - num to string to array
     - reverse array order
-    - if array = reversed array, true
-    - else false
+    - if array = reversed array, 
+      - true
+    - else 
+      - false
+
+
+#### Tools:
+
+```javascript
+    let arr = Array.from(x.toString());
+
+    let str = rev.join('');
+    let ans = parseInt(str);
+```
 
 #### Code 1
 ```javascript
